@@ -1,5 +1,6 @@
 
 /*
+
     ESTE CONTEÚDO FAZ PARTE DA AULA 045 DO CURSO "BANCO DE DADOS BOLADÃO"
     TIPOS DE COMANDOS SQL | TIPOS DE INSTRUÇÕES EM SQL
 
@@ -17,4 +18,17 @@
 
     * TCL - Transactional Control Language (Linguagem de Controle de Transação)
         BEGIN TRANSACTION, COMMIT, ROLLBACK
+*/
+
+/*
+
+  Ordem de Processamento Lógico da Query
+  1. FROM
+  2. WHERE
+  3. GROUP BY
+  4. HAVING
+  5. SELECT
+  6. ORDER BY
+  7. OFFSET FETCH | TOP
+
 */

@@ -21,7 +21,7 @@ ALTER DATABASE dbCartoon
 GO
 
 --função do sistema
-SELECT DATABASEPROPERTYEX('AdventureWorks2019', 'Collation') AS [Collate AdventureWorks2019],
+SELECT DATABASEPROPERTYEX('AdventureWorks2025', 'Collation') AS [Collate AdventureWorks2025],
        DATABASEPROPERTYEX('dbCartoon', 'Collation') AS [Collate dbCartoon]
 
 -- views (visão) do sistema
