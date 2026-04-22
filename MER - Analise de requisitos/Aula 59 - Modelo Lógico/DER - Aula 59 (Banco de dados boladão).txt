@@ -1,0 +1,71 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+/*
+    MAPEAMENTO MODELO LÓGICO
+
+    1:N -> o lado 'N' recebe a FK (foreign key)
+    1:1 -> união de tabelas
+    N:N -> nova tabela
+*/
+
+// Criação de entidades e atributos
+
+Table produto {
+  id_produto integer [primary key]
+  nome_produto varchar(70)
+}
+
+Table pessoa {
+  id_pessoa integer [primary key]
+  nome varchar(70)
+  dt_nascimento date
+  cpf varchar(12)
+}
+
+Table telefone {
+  id_pessoa integer [pk, ref: > pessoa.id_pessoa] 
+  numero varchar(15)
+  id_tipo_telefone tinyint [ref: > tipo_telefone.id_tipo_telefone, not null]
+}
+
+Table tipo_telefone {
+  id_tipo_telefone tinyint [primary key]
+  nome varchar(15)
+}
+
+Table venda {
+  id_venda integer [primary key]
+  dt_venda datetime
+  id_pessoa integer [ref: > pessoa.id_pessoa, not null] 
+}
+
+Table produto_venda {
+  id_prod_venda integer [primary key]
+  qtd integer
+  id_venda integer [ref: > venda.id_venda, not null]
+  id_produto integer [ref: > produto.id_produto, not null]
+}
+
+// -------------------------------------------------------------
+
+// Cardinalidade
+
+// Ref: pessoa.id_pessoa < telefone.id_pessoa
+
+// Ref user_posts: posts.user_id > produto.id_produto  // many-to-one
+
+// Ref: produto.id_produto  < follows.following_user_id
+
+// Ref: produto.id_produto  < follows.followed_user_id
+
+ // -------------------------------------------------------------
+
+// Inserção de dados | valores
+
+Records produto(id_produto , nome_produto) {
+  0, 'Alice'
+  1, 'Bob'
+  2, 'Candice'
+  3, 'David'
+}

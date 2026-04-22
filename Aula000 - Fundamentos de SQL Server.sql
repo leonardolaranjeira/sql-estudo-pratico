@@ -22,7 +22,8 @@
 
 /*
 
-  Ordem de Processamento Lógico da Query
+  ORDEM DE PROCESSAMENTO LÓGICO DA QUERY
+
   1. FROM
   2. WHERE
   3. GROUP BY
@@ -32,3 +33,13 @@
   7. OFFSET FETCH | TOP
 
 */
+
+/*
+
+    MAPEAMENTO MODELO LÓGICO
+
+    1:N -> o lado 'N' recebe a FK (foreign key)
+    1:1 -> união de tabelas
+    N:N -> nova tabela
+
+ */
