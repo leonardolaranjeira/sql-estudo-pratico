@@ -1,5 +1,6 @@
 
 /*
+
   =============================================================================
   TIPOS DE DADOS EM BANCO DE DADOS (GUIA RÁPIDO)
   =============================================================================
@@ -33,4 +34,6 @@
   =============================================================================
 
   EXISTEM MAIS TIPOS DE DADOS, PORÉM ESSES ENGLOBAM MAIOR PARTE DOS TIPOS DADOS PARA ESTUDO.
+  (Mais informações no diretório "SQL - Informações adicionais" que está presente neste arquivo.)
+
 */

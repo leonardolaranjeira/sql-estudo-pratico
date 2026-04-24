@@ -36,10 +36,47 @@
 
 /*
 
-    MAPEAMENTO MODELO LÓGICO
+    MAPEAMENTO MODELO LÓGICO - CARDINALIDADE
 
     1:N -> o lado 'N' recebe a FK (foreign key)
     1:1 -> união de tabelas
     N:N -> nova tabela
+
+ */
+
+/*
+
+    NORMALIZAÇÃO
+
+    Primeira forma normal (1FN)
+
+    - Eliminar grupos repetidos em tabelas individuais.
+
+    - Crie uma tabela separada para cada conjunto de dados relacionados.
+
+    - Identifique cada conjunto de dados relacionados com uma chave primária.
+
+    --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--
+
+    Segunda forma normal (2FN)
+
+    - Estiver na 1FN;
+
+    - Cada atributo não principal for dependente da chave primária inteira;
+
+    - Se a tabela possui chave primária composta, se um atributo depende apenas de uma parte da chave primária,
+      ele deve ser colocado em outra tabela;
+
+    - Crie tabelas separadas para conjuntos de valores que se aplicam a vários registros;
+
+    - Relacione essas tabelas com uma chave estrangeira.
+
+     --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--
+
+    Terceira forma normal (3FN)
+
+    - Estiver na 1FN e 2FN;
+
+    - Nenhuma coluna não-chave depender de outra coluna não-chave.
 
  */
